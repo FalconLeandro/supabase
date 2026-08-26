@@ -47,7 +47,7 @@ resources:
             - endpoint:
                 address:
                   socket_address:
-                    address: ${REST_HOST}
+                    address: postgrest.railway.internal
                     port_value: 3000
     health_checks:
       - timeout: 2s
