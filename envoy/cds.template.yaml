@@ -31,7 +31,7 @@ resources:
           max_pending_requests: 10000
           max_requests: 10000
 
-  - '@type': type.googleapis.com/envoy.config.cluster.v3.Cluster
+ - '@type': type.googleapis.com/envoy.config.cluster.v3.Cluster
     name: rest
     connect_timeout: 5s
     type: STRICT_DNS
@@ -47,7 +47,7 @@ resources:
             - endpoint:
                 address:
                   socket_address:
-                    address: postgrest.railway.internal
+                    address: ${REST_HOST}
                     port_value: 3000
     circuit_breakers:
       thresholds:
